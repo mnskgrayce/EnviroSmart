@@ -327,7 +327,8 @@ public class ContextManager {
 		return temperature >= Collections.min(tempThreshholds);
 	}
 
-	private static Integer calculateapoThreshhold(User user) {
+	// Tested
+	public static Integer calculateapoThreshhold(User user) {
 		Integer medicalConditionType = user.medicalConditionType;
 		Integer aqi = user.sensorData.aqi;
 		Integer result = null;
