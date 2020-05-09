@@ -309,18 +309,22 @@ public class ContextManager {
 		return result;
 	}
 
+	//
 	private static void resetClock(String username) {
 		users.get(username).clock = 0;
 	}
 
+	//
 	private static void tickClock(String username) {
 		users.get(username).clock += 1;
 	}
 
+	//
 	private static boolean checkapoReached(User user) {
 		return user.clock == user.apoThreshhold;
 	}
 
+	// Tested
 	private static boolean checkTempReached(User user) {
 		int temperature = user.sensorData.temperature;
 		List<Integer> tempThreshholds = Arrays.stream(user.tempThreshholds).boxed().collect(Collectors.toList());
