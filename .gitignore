@@ -1,0 +1,7 @@
+.idea/
+.settings/
+bin/
+generated/helper/
+.classpath
+.project
+csse4004.iml
