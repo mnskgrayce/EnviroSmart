@@ -19,5 +19,6 @@
     <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
     <orderEntry type="library" name="ice-3.7.2" level="project" />
     <orderEntry type="library" name="icestorm-3.7.2" level="project" />
+    <orderEntry type="library" name="org.junit.jupiter:junit-jupiter:5.4.2" level="project" />
   </component>
 </module>
