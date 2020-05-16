@@ -1,4 +1,4 @@
-package main.unit;
+package main.test;
 
 import main.LocationServer;
 import org.junit.jupiter.api.DisplayName;
@@ -10,7 +10,8 @@ import java.util.LinkedHashMap;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class LocationServerTest {
+// For unit tests, we cover readConfig
+class LocationServerReadConfigTest {
 
     LocationServer ls;
     Method readConfig;

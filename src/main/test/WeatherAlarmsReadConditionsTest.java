@@ -1,6 +1,7 @@
-package main.unit;
+package main.test;
 
 import main.WeatherAlarms;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Method;
@@ -8,7 +9,8 @@ import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class WeatherAlarmsTest {
+// For unit tests, we cover readWeatherConditions
+class WeatherAlarmsReadConditionsTest {
 
     WeatherAlarms wa;
     Method readWeatherConditions;
@@ -26,6 +28,7 @@ class WeatherAlarmsTest {
     }
 
     @Test
+    @DisplayName("WeatherConditionsShouldBeReadCorrectly")
     public void testReadWeatherConditions() throws Exception {
         List<Integer> expected = Arrays.asList(0, 1, 2, 3);
         actual = (List<Integer>) readWeatherConditions.invoke(wa);
