@@ -1,4 +1,4 @@
-package main.test;
+package main.read_input;
 
 import main.LocationServer;
 import org.junit.jupiter.api.DisplayName;
