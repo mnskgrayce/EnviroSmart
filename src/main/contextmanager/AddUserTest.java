@@ -23,11 +23,9 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 @RunWith(Parameterized.class)
 public class AddUserTest {
     public String name;
-    public LinkedHashMap<String, User> expectedValue;
 
-    public AddUserTest(String name, LinkedHashMap<String, User> expectedValue) {
+    public AddUserTest(String name) {
         this.name = name;
-        this.expectedValue = expectedValue;
     }
 
     @Before
@@ -48,11 +46,10 @@ public class AddUserTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         Object[][] data = new Object[][] {
-                {"Jack", null},
-                {"David", null},
-                {"Tom", null},
-                {"",null},
-                {null, null}
+                {"Jack"},
+                {"Tom"},
+                {""},
+                {null}
         };
         return Arrays.asList(data);
     }
