@@ -16,8 +16,9 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @RunWith(Parameterized.class)
 public class AddUserTest {
@@ -48,7 +49,10 @@ public class AddUserTest {
     public static Collection<Object[]> data() {
         Object[][] data = new Object[][] {
                 {"Jack", null},
-                {"David", null}
+                {"David", null},
+                {"Tom", null},
+                {"",null},
+                {null, null}
         };
         return Arrays.asList(data);
     }
@@ -64,6 +68,10 @@ public class AddUserTest {
         Field field = (ContextManager.class).getDeclaredField("users");
         field.setAccessible(true);
         LinkedHashMap<String, User> users = (LinkedHashMap<String, User>) field.get(null);
+
+        if (name == null || name.equals("")){
+            assertFalse(users.containsKey(name));
+        }
 
         assertTrue(users.containsKey(name));
         assertEquals(expectedPrint.trim(), outContent.toString().trim());
