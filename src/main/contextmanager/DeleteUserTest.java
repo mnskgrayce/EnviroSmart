@@ -1,10 +1,13 @@
-package main.contextmanager;
+package unit.contextManager;
 
 import com.zeroc.Ice.Current;
 import helper.User;
 import main.ContextManager;
 import org.junit.Before;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.jupiter.api.Order;
+import org.junit.runners.MethodSorters;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -15,6 +18,7 @@ import java.util.LinkedHashMap;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class DeleteUserTest {
     public ContextManager.ContextManagerWorkerI cmw = new ContextManager.ContextManagerWorkerI();
 
@@ -45,7 +49,7 @@ public class DeleteUserTest {
     }
 
     @Test
-    public void testDeleteSome() throws Exception{
+    public void test1DeleteSome() throws Exception{
         cmw.deleteUser("David", new Current());
         Field field = (ContextManager.class).getDeclaredField("users");
         field.setAccessible(true);
@@ -54,7 +58,7 @@ public class DeleteUserTest {
     }
 
     @Test
-    public void testDeleteAll() throws Exception {
+    public void test2DeleteAll(){
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
         cmw.deleteUser("Jack", new Current());

@@ -1,4 +1,4 @@
-package main.contextmanager;
+package unit.contextManager;
 
 import main.ContextManager;
 import org.junit.Before;
@@ -13,7 +13,6 @@ import java.util.Collection;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
-
 
 @RunWith(Parameterized.class)
 public class GetLocationByServiceTest {
@@ -53,6 +52,10 @@ public class GetLocationByServiceTest {
                         "Get location by text correctly"
                 },
                 {
+                        Arrays.asList("Vivo City Shopping Centre","Crescent Mall"), "shops",
+                        "Get location by text correctly, only get indoor locations"
+                },
+                {
                         Arrays.asList("Vivo City Shopping Centre","Crescent Mall"), "RESTAURANTS",
                         "Get location by text upper case"
                 },
@@ -62,7 +65,7 @@ public class GetLocationByServiceTest {
                 },
                 {
                         Arrays.asList(), "",
-                        "Get location by text empty tex"
+                        "Get location by text empty text"
                 },
                 {
                         Arrays.asList(), "asskjfn122123iwnrgo",

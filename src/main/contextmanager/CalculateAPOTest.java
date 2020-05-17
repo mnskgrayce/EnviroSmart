@@ -1,4 +1,4 @@
-package main.contextmanager;
+package unit.contextManager;
 
 import helper.SensorData;
 import helper.User;
