@@ -1,4 +1,4 @@
-package unit.contextManager;
+package main.contextManager;
 
 import com.zeroc.Ice.Current;
 import main.ContextManager;
@@ -39,7 +39,7 @@ public class SearchInfoTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         Object[][] data = new Object[][] {
-                { "Get Dam sem","Dam Sen Parklands", "The Dam Sen Parklands area was created as part of the rejuvenation of the industrial upgrade undertaken for World Expo 1988. The Parklands area is spacious with plenty of green and spaces for all ages. A big lake promenade stretches the area of Dam Sen Parklands."},
+                { "Get Dam Sen","Dam Sen Parklands", "The Dam Sen Parklands area was created as part of the rejuvenation of the industrial upgrade undertaken for World Expo 1988. The Parklands area is spacious with plenty of green and spaces for all ages. A big lake promenade stretches the area of Dam Sen Parklands."},
                 { "Get HCM City","Ho Chi Minh City, Downtown", "The Ho Chi Minh City central business district (CBD), or 'the City' is located on a central point in district One. The point, known at its tip as Central Point, slopes upward to the north-west where 'the city' is bounded by parkland and the inner city suburb of District 3, District 4 and District 5."},
                 { "Get Empty","", null},
                 { "Get null",null, null},

@@ -1,4 +1,4 @@
-package unit.contextManager;
+package main.contextManager;
 
 import main.ContextManager;
 import org.junit.Before;
