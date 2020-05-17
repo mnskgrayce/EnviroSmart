@@ -1,4 +1,4 @@
-package main.unit.contextManager;
+package main.contextmanager;
 
 import com.zeroc.Ice.Current;
 import helper.User;

@@ -1,4 +1,4 @@
-package main.read_input;
+package main.low;
 
 import org.junit.jupiter.api.*;
 import support.Sensor;

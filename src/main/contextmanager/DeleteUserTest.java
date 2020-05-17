@@ -1,4 +1,4 @@
-package main.unit.contextManager;
+package main.contextmanager;
 
 import com.zeroc.Ice.Current;
 import helper.User;
@@ -54,7 +54,7 @@ public class DeleteUserTest {
     }
 
     @Test
-    public void testDeleteAll() throws Exception{
+    public void testDeleteAll() throws Exception {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
         cmw.deleteUser("Jack", new Current());

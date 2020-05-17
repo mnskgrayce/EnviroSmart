@@ -1,4 +1,4 @@
-package main.read_input;
+package main.low;
 
 import helper.SensorData;
 import main.AllSensors;

@@ -1,4 +1,4 @@
-package main.unit.contextManager;
+package main.contextmanager;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
