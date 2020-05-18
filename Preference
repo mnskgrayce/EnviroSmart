@@ -11,3 +11,20 @@ pref: when 16 suggest pool
 pref: when APO suggest cinema
 pref: when weather suggest shops
 ***
+name: duy
+Medical Condition Type: 1
+pref: when 25 suggest pool
+pref: when APO suggest cinema
+pref: when weather suggest bowling
+***
+name: anh
+Medical Condition Type: 2
+pref: when 30 suggest shops
+pref: when APO suggest bowling
+pref: when weather suggest shops
+***
+name: dummy
+Medical Condition Type: !@
+pref: when shops suggest 30
+pref: when bowling suggest APO
+pref: when shops suggest weather
